@@ -1,0 +1,13 @@
+#!/usr/bin/python
+
+import sys
+for line in sys.stdin:
+    try:
+        line = line.strip()
+        if(len(line) != 0):
+            inpline = line.split(',')
+            pcp = inpline[3]
+            if (float(pcp) != 0.0):
+                print line
+    except ValueError:
+          continue
